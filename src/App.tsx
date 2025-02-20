@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Github, Linkedin, ExternalLink, Menu, X, Sun, Moon, MapPin } from 'lucide-react';
 import { useTheme } from './ThemeContext';
-import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
+import weather  from './assests/weather.png';
+import dashboard  from './assests/dashboard.png';
+import website  from './assests/website.png';
+import chatbot  from './assests/chatbot.png';
+import yongama  from './assests/yongama.jpg';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -111,7 +117,7 @@ function App() {
             <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">About Me</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <motion.img 
-                src="/picture/Yongama.jpg"
+                src={yongama}
                 alt="Profile"
                 className="rounded-lg shadow-lg"
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -202,7 +208,7 @@ function App() {
                 transition={{ duration: 1 }}
               >
                 <img 
-                  src="/picture/weather app.PNG"
+                  src={weather}
                   alt="Weather App"
                   className="w-full h-48 object-cover"
                 />
@@ -230,7 +236,7 @@ function App() {
                 transition={{ duration: 1 }}
               >
                 <img 
-                  src="/picture/Dashboard.PNG"
+                  src={dashboard}
                   alt="Dashboard"
                   className="w-full h-48 object-cover"
                 />
@@ -258,7 +264,7 @@ function App() {
                 transition={{ duration: 1 }}
               >
                 <img 
-                  src="/picture/website.PNG"
+                  src={website}
                   alt="Wipro Website"
                   className="w-full h-48 object-cover"
                 />
@@ -286,7 +292,7 @@ function App() {
                 transition={{ duration: 1 }}
               >
                 <img 
-                  src="/picture/chatbot.PNG"
+                  src={chatbot}
                   alt="Chatboard"
                   className="w-full h-48 object-cover"
                 />
